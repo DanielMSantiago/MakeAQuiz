@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <title>Make The Quiz</title>
+</head>
+
+<body>
+    <div class="container-sm justify-content-center text-center">
+        <h1>
+            Make the Quiz
+        </h1>
+        <p>
+            On this page, you will be able to set the amount of questions, the type of questions (multiple choice or short answer), and the answer to the question. Short answer questions will need to be graded by the teacher. Select the correct answer by pressing
+            radio button next to correct input.
+        </p>
+    </div>
+    <br>
+    <div class="mx-4">
+        <form name="create-question" onsubmit="return GetQuestion()">
+            <label>Question: </label>
+            <br>
+            <input name="Question">
+            <br>
+            <div>
+                <div>
+                    <input type="radio" name="MultipleChoice"><label>Multiple Choice</label> <input type="radio" name="ShortAnswer"><label>Short Answer</label>
+                </div>
+                <br>
+                <label>Choice 1</label>
+                <br>
+                <input name="ChoiceOne">
+                <input type="radio" name="Answer">
+                <br>
+                <label>Choice 2</label>
+                <br>
+                <input name="ChoiceTwo">
+                <input type="radio" name="Answer">
+                <br>
+                <label>Choice 3</label>
+                <br>
+                <input name="ChoiceThree">
+                <input type="radio" name="Answer">
+                <br>
+                <label>Choice 4</label>
+                <br>
+                <input name="ChoiceFour">
+                <input type="radio" name="Answer">
+            </div>
+            <br>
+            <button type="submit" onclick="">Submit Question</button>
+        </form>
+
+    </div>
+</body>
+
+</html>
