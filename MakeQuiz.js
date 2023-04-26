@@ -1,4 +1,4 @@
-const questions = [{}];
+const questions = [];
 
 let ConfirmQuestion = () => {
     var question = document.forms['create-question']['Question'].value;
@@ -23,6 +23,7 @@ let ConfirmQuestion = () => {
     }
 }
 $(document).ready(function() {
+
     $("button[name='GetAndStore']").click(function() {
         var question = document.forms['create-question']['Question'].value;
         /*shortOrMultiple = true;
@@ -31,24 +32,25 @@ $(document).ready(function() {
         } else {
             document.forms['create-question']['ShortAnswer'].value;
         }*/
-        var choiceOne = document.forms['create-question']['ChoiceOne'].value;
-        var choiceTwo = document.forms['create-question']['ChoiceTwo'].value;
-        var choiceThree = document.forms['create-question']['ChoiceThree'].value;
-        var choiceFour = document.forms['create-question']['ChoiceFour'].value;
+        let choiceOne = document.forms['create-question']['ChoiceOne'].value;
+        let choiceTwo = document.forms['create-question']['ChoiceTwo'].value;
+        let choiceThree = document.forms['create-question']['ChoiceThree'].value;
+        let choiceFour = document.forms['create-question']['ChoiceFour'].value;
 
         if (!ConfirmQuestion()) return false;
 
         else {
-            questions.push({
-                question,
-                shortOrMultiple,
-                choiceOne,
-                choiceTwo,
-                choiceThree,
-                choiceFour
-            });
+            const testQuestion = {
+                question: question,
+                choice1: choiceOne,
+                choice2: choiceTwo,
+                choice3: choiceThree,
+                choice4: choiceFour,
+                //qAnswer: document.forms['create-question']['Answer'].value
+            };
+            questions.push(testQuestion);
         }
-        alert(questions.length);
+        console.log(questions.length);
     });
 
 });
